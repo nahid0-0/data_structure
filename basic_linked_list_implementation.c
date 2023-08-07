@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct stdudent{
+struct Node{
     int data;
     int gpa;
-    struct stdudent *node;
+    struct Node *node;
 };
 int main(){
-    struct  stdudent *head = malloc (sizeof(struct stdudent));
-    struct  stdudent *can =head;
+    struct  Node *head = malloc (sizeof(struct Node));
+    struct  Node *can =head;
 
     int n;
     scanf("%d", &n);
@@ -20,10 +20,10 @@ int main(){
         scanf("%d", &y);
         head -> data = x;
         head -> gpa = y;
-        head -> node = malloc(sizeof(struct stdudent));
+        head -> node = malloc(sizeof(struct Node));
         head = head -> node;
         head -> node = NULL;
-        
+
 
     }
 
